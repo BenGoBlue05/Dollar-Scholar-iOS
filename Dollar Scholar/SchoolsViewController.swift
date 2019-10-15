@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SchoolsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -47,6 +47,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let schoolSummary = fetchedResultsController.object(at: indexPath)
+        let vc = storyboard?.instantiateViewController(identifier: "schoolDetailsViewController") as! SchoolDetailsViewController
+        vc.summary = schoolSummary
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func fetchSchoolSummaries() {
         DSClient.shared.getSchoolSummaries { result in
             switch result {
@@ -73,7 +80,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 }
 
-extension ViewController : NSFetchedResultsControllerDelegate {
+extension SchoolsViewController : NSFetchedResultsControllerDelegate {
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .insert:

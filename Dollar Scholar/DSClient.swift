@@ -41,6 +41,12 @@ class DSClient {
         let reqs = "school.degrees_awarded.predominant=3&latest.student.size__range=1000.."
         let sortedBy = "sort=latest.earnings.10_yrs_after_entry.median:desc"
         let url = "\(DSClient.baseApi)?api_key=\(Secrets.apiKey.rawValue)&\(fields)&\(reqs)&\(sortedBy)&per_page=100"
+        getRequest(url, completion)
+    }
+    
+    func getSchoolDetails(_ id: Int, _ completion: @escaping (DSResult<SchoolDetailsResponse>) -> Void) {
+        let fields = "id,school.name,latest.earnings.10_yrs_after_entry.working_not_enrolled.earnings_percentile.25,latest.earnings.10_yrs_after_entry.median,latest.earnings.10_yrs_after_entry.working_not_enrolled.earnings_percentile.75,latest.cost.tuition.out_of_state,latest.cost.tuition.in_state,latest.completion.completion_rate_4yr_100nt,latest.completion.completion_rate_4yr_150nt,latest.admissions.admission_rate.overall,latest.admissions.act_scores.midpoint.cumulative,latest.admissions.sat_scores.average.overall"
+        let url = "\(DSClient.baseApi)?api_key=\(Secrets.apiKey.rawValue)&fields=\(fields)&id=\(id)"
         print(url)
         getRequest(url, completion)
     }

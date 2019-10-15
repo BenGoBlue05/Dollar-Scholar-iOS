@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		CE05A6E02356158500ABE101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6DF2356158500ABE101 /* AppDelegate.swift */; };
 		CE05A6E22356158500ABE101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6E12356158500ABE101 /* SceneDelegate.swift */; };
-		CE05A6E42356158500ABE101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6E32356158500ABE101 /* ViewController.swift */; };
+		CE05A6E42356158500ABE101 /* SchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6E32356158500ABE101 /* SchoolsViewController.swift */; };
 		CE05A6E72356158500ABE101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE05A6E52356158500ABE101 /* Main.storyboard */; };
 		CE05A6EA2356158500ABE101 /* Dollar_Scholar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6E82356158500ABE101 /* Dollar_Scholar.xcdatamodeld */; };
 		CE05A6EC2356158700ABE101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE05A6EB2356158700ABE101 /* Assets.xcassets */; };
 		CE05A6EF2356158700ABE101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE05A6ED2356158700ABE101 /* LaunchScreen.storyboard */; };
 		CE05A6F723561C1800ABE101 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6F623561C1800ABE101 /* Secrets.swift */; };
 		CE05A6F92356256000ABE101 /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6F82356256000ABE101 /* SummaryTableViewCell.swift */; };
+		CE72A4D02356569900079DCE /* SchoolDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72A4CF2356569900079DCE /* SchoolDetailsViewController.swift */; };
+		CEBA67BD2356658D006CDF78 /* SchoolDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA67BC2356658D006CDF78 /* SchoolDetailsResponse.swift */; };
 		CEEFEE7023562BA300C9AEA9 /* DSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFEE6F23562BA300C9AEA9 /* DSClient.swift */; };
 		CEEFEE7223562C2900C9AEA9 /* DSResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFEE7123562C2900C9AEA9 /* DSResult.swift */; };
 		CEEFEE7423562FBB00C9AEA9 /* SchoolSummaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFEE7323562FBB00C9AEA9 /* SchoolSummaryResponse.swift */; };
@@ -25,7 +27,7 @@
 		CE05A6DC2356158500ABE101 /* Dollar Scholar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dollar Scholar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE05A6DF2356158500ABE101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE05A6E12356158500ABE101 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE05A6E32356158500ABE101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE05A6E32356158500ABE101 /* SchoolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewController.swift; sourceTree = "<group>"; };
 		CE05A6E62356158500ABE101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE05A6E92356158500ABE101 /* Dollar_Scholar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dollar_Scholar.xcdatamodel; sourceTree = "<group>"; };
 		CE05A6EB2356158700ABE101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +35,8 @@
 		CE05A6F02356158700ABE101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE05A6F623561C1800ABE101 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		CE05A6F82356256000ABE101 /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
+		CE72A4CF2356569900079DCE /* SchoolDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailsViewController.swift; sourceTree = "<group>"; };
+		CEBA67BC2356658D006CDF78 /* SchoolDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailsResponse.swift; sourceTree = "<group>"; };
 		CEEFEE6F23562BA300C9AEA9 /* DSClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSClient.swift; sourceTree = "<group>"; };
 		CEEFEE7123562C2900C9AEA9 /* DSResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSResult.swift; sourceTree = "<group>"; };
 		CEEFEE7323562FBB00C9AEA9 /* SchoolSummaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSummaryResponse.swift; sourceTree = "<group>"; };
@@ -70,8 +74,9 @@
 			children = (
 				CE05A6DF2356158500ABE101 /* AppDelegate.swift */,
 				CE05A6E12356158500ABE101 /* SceneDelegate.swift */,
-				CE05A6E32356158500ABE101 /* ViewController.swift */,
+				CE05A6E32356158500ABE101 /* SchoolsViewController.swift */,
 				CE05A6E52356158500ABE101 /* Main.storyboard */,
+				CE72A4CF2356569900079DCE /* SchoolDetailsViewController.swift */,
 				CE05A6F82356256000ABE101 /* SummaryTableViewCell.swift */,
 				CE05A6EB2356158700ABE101 /* Assets.xcassets */,
 				CE05A6ED2356158700ABE101 /* LaunchScreen.storyboard */,
@@ -81,6 +86,7 @@
 				CEEFEE6F23562BA300C9AEA9 /* DSClient.swift */,
 				CEEFEE7123562C2900C9AEA9 /* DSResult.swift */,
 				CEEFEE7323562FBB00C9AEA9 /* SchoolSummaryResponse.swift */,
+				CEBA67BC2356658D006CDF78 /* SchoolDetailsResponse.swift */,
 			);
 			path = "Dollar Scholar";
 			sourceTree = "<group>";
@@ -158,9 +164,11 @@
 			files = (
 				CE05A6EA2356158500ABE101 /* Dollar_Scholar.xcdatamodeld in Sources */,
 				CE05A6F723561C1800ABE101 /* Secrets.swift in Sources */,
+				CEBA67BD2356658D006CDF78 /* SchoolDetailsResponse.swift in Sources */,
 				CEEFEE7023562BA300C9AEA9 /* DSClient.swift in Sources */,
-				CE05A6E42356158500ABE101 /* ViewController.swift in Sources */,
+				CE05A6E42356158500ABE101 /* SchoolsViewController.swift in Sources */,
 				CE05A6E02356158500ABE101 /* AppDelegate.swift in Sources */,
+				CE72A4D02356569900079DCE /* SchoolDetailsViewController.swift in Sources */,
 				CE05A6F92356256000ABE101 /* SummaryTableViewCell.swift in Sources */,
 				CE05A6E22356158500ABE101 /* SceneDelegate.swift in Sources */,
 				CEEFEE7223562C2900C9AEA9 /* DSResult.swift in Sources */,
