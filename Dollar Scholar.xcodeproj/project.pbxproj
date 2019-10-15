@@ -14,6 +14,7 @@
 		CE05A6EA2356158500ABE101 /* Dollar_Scholar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6E82356158500ABE101 /* Dollar_Scholar.xcdatamodeld */; };
 		CE05A6EC2356158700ABE101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE05A6EB2356158700ABE101 /* Assets.xcassets */; };
 		CE05A6EF2356158700ABE101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE05A6ED2356158700ABE101 /* LaunchScreen.storyboard */; };
+		CE05A6F723561C1800ABE101 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6F623561C1800ABE101 /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CE05A6EB2356158700ABE101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE05A6EE2356158700ABE101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE05A6F02356158700ABE101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE05A6F623561C1800ABE101 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CE05A6ED2356158700ABE101 /* LaunchScreen.storyboard */,
 				CE05A6F02356158700ABE101 /* Info.plist */,
 				CE05A6E82356158500ABE101 /* Dollar_Scholar.xcdatamodeld */,
+				CE05A6F623561C1800ABE101 /* Secrets.swift */,
 			);
 			path = "Dollar Scholar";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE05A6EA2356158500ABE101 /* Dollar_Scholar.xcdatamodeld in Sources */,
+				CE05A6F723561C1800ABE101 /* Secrets.swift in Sources */,
 				CE05A6E42356158500ABE101 /* ViewController.swift in Sources */,
 				CE05A6E02356158500ABE101 /* AppDelegate.swift in Sources */,
 				CE05A6E22356158500ABE101 /* SceneDelegate.swift in Sources */,
