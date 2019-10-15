@@ -12,6 +12,7 @@ class SchoolsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     var fetchedResultsController: NSFetchedResultsController<SchoolSummary>!
     
     fileprivate func setUpFetchedResultsController() {
@@ -35,7 +36,11 @@ class SchoolsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
+        let rows = fetchedResultsController.sections?[section].numberOfObjects ?? 0
+        if loadingIndicator.isAnimating && rows > 0 {
+            loadingIndicator.stopAnimating()
+        }
+        return rows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,9 +60,14 @@ class SchoolsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func fetchSchoolSummaries() {
+        let fetchedObjects = fetchedResultsController.fetchedObjects ?? [SchoolSummary]()
+        if fetchedObjects.isEmpty {
+            loadingIndicator.startAnimating()
+        }
         DSClient.shared.getSchoolSummaries { result in
             switch result {
             case .error(let message):
+                self.loadingIndicator.stopAnimating()
                 self.showError(message)
             case .success(let response):
                 self.insertSchoolSummaries(response.results)

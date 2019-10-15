@@ -85,6 +85,10 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ns7-gT-CA0"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="OUQ-cC-Hbg">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -97,6 +101,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wdP-HI-g6b"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="OUQ-cC-Hbg" id="ik0-D1-vmK"/>
                         <outlet property="tableView" destination="IIf-yC-QEd" id="KbN-6y-F1R"/>
                     </connections>
                 </viewController>
