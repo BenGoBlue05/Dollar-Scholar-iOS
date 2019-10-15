@@ -17,14 +17,14 @@ struct SchoolDetailsResponseModel : Codable {
     let name: String
     let tuitionInState: Int
     let tuitionOutOfState: Int
-    let completionRate4yr: Double
-    let completionRate6yr: Double
+    let completionRate4yr: Double?
+    let completionRate6yr: Double?
     let actAvg: Double?
     let satAvg: Double?
-    let acceptanceRate: Double
-    let earnings25: Int
+    let acceptanceRate: Double?
+    let earnings25: Int?
     let earnings50: Int
-    let earnings75: Int
+    let earnings75: Int?
     
     enum CodingKeys : String, CodingKey {
         case id

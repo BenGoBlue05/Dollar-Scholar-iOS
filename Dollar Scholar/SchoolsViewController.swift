@@ -58,7 +58,7 @@ class SchoolsViewController: UIViewController, UITableViewDelegate, UITableViewD
         DSClient.shared.getSchoolSummaries { result in
             switch result {
             case .error(let message):
-                print(message)
+                self.showError(message)
             case .success(let response):
                 self.insertSchoolSummaries(response.results)
             }
@@ -126,5 +126,11 @@ extension UIViewController {
     
     func viewContext() -> NSManagedObjectContext {
         return  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    }
+    
+    func showError(_ message: String, _ title: String = "Error") {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertVC, animated: true)
     }
 }

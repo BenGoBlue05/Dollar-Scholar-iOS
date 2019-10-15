@@ -57,7 +57,7 @@ class SchoolDetailsViewController: UIViewController {
             switch result{
             case .error(let message):
                 self.loadingIndicator.stopAnimating()
-                print(message)
+                self.showError(message)
             case .success(let response):
                 self.saveSchoolDetails(response.results.first!)
             }
@@ -72,18 +72,29 @@ class SchoolDetailsViewController: UIViewController {
         school.name = model.name
         school.costInState = Int32(model.tuitionInState)
         school.costOutOfState = Int32(model.tuitionOutOfState)
-        school.completionRate4yr = model.completionRate4yr
-        school.completionRate6yr = model.completionRate6yr
+        if let completionRate = model.completionRate4yr {
+            school.completionRate4yr = completionRate
+        }
+        if let completionRate = model.completionRate6yr {
+            school.completionRate6yr = completionRate
+        }
         if let actAvg = model.actAvg {
             school.actAvg = Int32(actAvg.rounded())
         }
+        
         if let satAvg = model.satAvg {
             school.satAvg = Int32(satAvg.rounded())
         }
-        school.acceptanceRate = model.acceptanceRate
-        school.earnings25thPercentile = Int32(model.earnings25)
+        if let rate = model.acceptanceRate {
+            school.acceptanceRate = rate
+        }
+        if let earnings = model.earnings25 {
+            school.earnings25thPercentile = Int32(earnings)
+        }
+        if let earnings = model.earnings75 {
+            school.earnings75thPercentile = Int32(earnings)
+        }
         school.earningsMedian = Int32(model.earnings50)
-        school.earnings75thPercentile = Int32(model.earnings75)
         context.insert(school)
         saveContext()
         loadingIndicator.stopAnimating()
@@ -103,15 +114,29 @@ class SchoolDetailsViewController: UIViewController {
     }
     
     func populateViews(_ school: SchoolDetails) {
-        earnings25Label.text = "$\(school.earnings25thPercentile)"
-        earnings75Label.text = "$\(school.earnings75thPercentile)"
+        if school.earnings25thPercentile > 0 {
+            earnings25Label.text = "$\(school.earnings25thPercentile)"
+        }
+        if school.earnings75thPercentile > 0 {
+            earnings75Label.text = "$\(school.earnings75thPercentile)"
+        }
         tuitionInStateLabel.text = "$\(school.costInState)"
         tuitionOutOfStateLabel.text = "$\(school.costOutOfState)"
-        completionRate4yrLabel.text = formatPercent(school.completionRate4yr)
-        completionRate6yrLabel.text = formatPercent(school.completionRate6yr)
-        actLabel.text = String(school.actAvg)
-        satLabel.text = String(school.satAvg)
-        acceptanceRateLabel.text = self.formatPercent(school.acceptanceRate)
+        if school.completionRate4yr > 0 {
+            completionRate4yrLabel.text = formatPercent(school.completionRate4yr)
+        }
+        if school.completionRate6yr > 0 {
+            completionRate6yrLabel.text = formatPercent(school.completionRate6yr)
+        }
+        if school.actAvg > 0 {
+            actLabel.text = String(school.actAvg)
+        }
+        if school.satAvg > 0 {
+            satLabel.text = String(school.satAvg)
+        }
+        if school.acceptanceRate > 0 {
+            acceptanceRateLabel.text = self.formatPercent(school.acceptanceRate)
+        }
     }
     
     func formatPercent(_ dec: Double) -> String {
