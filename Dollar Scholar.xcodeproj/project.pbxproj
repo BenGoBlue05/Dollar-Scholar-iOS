@@ -15,6 +15,10 @@
 		CE05A6EC2356158700ABE101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE05A6EB2356158700ABE101 /* Assets.xcassets */; };
 		CE05A6EF2356158700ABE101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE05A6ED2356158700ABE101 /* LaunchScreen.storyboard */; };
 		CE05A6F723561C1800ABE101 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6F623561C1800ABE101 /* Secrets.swift */; };
+		CE05A6F92356256000ABE101 /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05A6F82356256000ABE101 /* SummaryTableViewCell.swift */; };
+		CEEFEE7023562BA300C9AEA9 /* DSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFEE6F23562BA300C9AEA9 /* DSClient.swift */; };
+		CEEFEE7223562C2900C9AEA9 /* DSResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFEE7123562C2900C9AEA9 /* DSResult.swift */; };
+		CEEFEE7423562FBB00C9AEA9 /* SchoolSummaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFEE7323562FBB00C9AEA9 /* SchoolSummaryResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		CE05A6EE2356158700ABE101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE05A6F02356158700ABE101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE05A6F623561C1800ABE101 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		CE05A6F82356256000ABE101 /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
+		CEEFEE6F23562BA300C9AEA9 /* DSClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSClient.swift; sourceTree = "<group>"; };
+		CEEFEE7123562C2900C9AEA9 /* DSResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSResult.swift; sourceTree = "<group>"; };
+		CEEFEE7323562FBB00C9AEA9 /* SchoolSummaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSummaryResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +72,15 @@
 				CE05A6E12356158500ABE101 /* SceneDelegate.swift */,
 				CE05A6E32356158500ABE101 /* ViewController.swift */,
 				CE05A6E52356158500ABE101 /* Main.storyboard */,
+				CE05A6F82356256000ABE101 /* SummaryTableViewCell.swift */,
 				CE05A6EB2356158700ABE101 /* Assets.xcassets */,
 				CE05A6ED2356158700ABE101 /* LaunchScreen.storyboard */,
 				CE05A6F02356158700ABE101 /* Info.plist */,
 				CE05A6E82356158500ABE101 /* Dollar_Scholar.xcdatamodeld */,
 				CE05A6F623561C1800ABE101 /* Secrets.swift */,
+				CEEFEE6F23562BA300C9AEA9 /* DSClient.swift */,
+				CEEFEE7123562C2900C9AEA9 /* DSResult.swift */,
+				CEEFEE7323562FBB00C9AEA9 /* SchoolSummaryResponse.swift */,
 			);
 			path = "Dollar Scholar";
 			sourceTree = "<group>";
@@ -146,9 +158,13 @@
 			files = (
 				CE05A6EA2356158500ABE101 /* Dollar_Scholar.xcdatamodeld in Sources */,
 				CE05A6F723561C1800ABE101 /* Secrets.swift in Sources */,
+				CEEFEE7023562BA300C9AEA9 /* DSClient.swift in Sources */,
 				CE05A6E42356158500ABE101 /* ViewController.swift in Sources */,
 				CE05A6E02356158500ABE101 /* AppDelegate.swift in Sources */,
+				CE05A6F92356256000ABE101 /* SummaryTableViewCell.swift in Sources */,
 				CE05A6E22356158500ABE101 /* SceneDelegate.swift in Sources */,
+				CEEFEE7223562C2900C9AEA9 /* DSResult.swift in Sources */,
+				CEEFEE7423562FBB00C9AEA9 /* SchoolSummaryResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

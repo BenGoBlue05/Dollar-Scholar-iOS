@@ -19,15 +19,71 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pK3-Nj-Xk7">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="summaryTableViewCell" id="pK3-Nj-Xk7" customClass="SummaryTableViewCell" customModule="Dollar_Scholar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="106.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pK3-Nj-Xk7" id="2nc-Ap-0Xp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="106.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="University of Michigan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33w-78-Qcu">
+                                                    <rect key="frame" x="16" y="8" width="382" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ann Arbor, MI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXF-VW-j0w">
+                                                    <rect key="frame" x="36" y="28.5" width="342" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Median Earnings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R95-Cy-X1h">
+                                                    <rect key="frame" x="36" y="51" width="132" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10 yrs after entry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjh-4i-ufv">
+                                                    <rect key="frame" x="36" y="72" width="97" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$102,304" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fam-VO-1rZ">
+                                                    <rect key="frame" x="172" y="51" width="73.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.17911763452070548" green="0.78039215689999997" blue="0.50496193246876375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Sjh-4i-ufv" firstAttribute="top" secondItem="R95-Cy-X1h" secondAttribute="bottom" id="32h-yR-ZSv"/>
+                                                <constraint firstItem="fam-VO-1rZ" firstAttribute="leading" secondItem="R95-Cy-X1h" secondAttribute="trailing" constant="4" id="8o9-z0-Sft"/>
+                                                <constraint firstAttribute="trailing" secondItem="33w-78-Qcu" secondAttribute="trailing" constant="16" id="Atb-ke-HEV"/>
+                                                <constraint firstItem="HXF-VW-j0w" firstAttribute="top" secondItem="33w-78-Qcu" secondAttribute="bottom" id="Cv9-7L-Whl"/>
+                                                <constraint firstItem="33w-78-Qcu" firstAttribute="top" secondItem="2nc-Ap-0Xp" secondAttribute="top" constant="8" id="Dso-Nl-R5F"/>
+                                                <constraint firstItem="HXF-VW-j0w" firstAttribute="leading" secondItem="2nc-Ap-0Xp" secondAttribute="leadingMargin" constant="16" id="KY7-mT-aHa"/>
+                                                <constraint firstItem="33w-78-Qcu" firstAttribute="leading" secondItem="2nc-Ap-0Xp" secondAttribute="leading" constant="16" id="Le7-wR-CbN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Sjh-4i-ufv" secondAttribute="bottom" constant="8" id="Mga-IW-5Xd"/>
+                                                <constraint firstItem="fam-VO-1rZ" firstAttribute="top" secondItem="HXF-VW-j0w" secondAttribute="bottom" constant="8" id="Qdl-GA-7fc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HXF-VW-j0w" secondAttribute="trailing" constant="16" id="TIz-es-W5H"/>
+                                                <constraint firstItem="R95-Cy-X1h" firstAttribute="top" secondItem="HXF-VW-j0w" secondAttribute="bottom" constant="8" id="lqQ-ek-8Vz"/>
+                                                <constraint firstItem="Sjh-4i-ufv" firstAttribute="leading" secondItem="2nc-Ap-0Xp" secondAttribute="leadingMargin" constant="16" id="tAM-c4-phb"/>
+                                                <constraint firstItem="R95-Cy-X1h" firstAttribute="leading" secondItem="2nc-Ap-0Xp" secondAttribute="leadingMargin" constant="16" id="utL-0c-GSF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="earningsLabel" destination="fam-VO-1rZ" id="OMl-MI-eju"/>
+                                            <outlet property="locationLabel" destination="HXF-VW-j0w" id="9PN-Pn-eRR"/>
+                                            <outlet property="nameLabel" destination="33w-78-Qcu" id="jEJ-SE-ksh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Rde-XW-JQr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ns7-gT-CA0"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -40,6 +96,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="wdP-HI-g6b"/>
+                    <connections>
+                        <outlet property="tableView" destination="IIf-yC-QEd" id="KbN-6y-F1R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
